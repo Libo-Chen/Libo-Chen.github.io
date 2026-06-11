@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Research themes at Libo Chen's Lab — neuromorphic devices, brain-inspired circuits, spiking neural networks, sensing, and edge AI." />
+  <title>Research | Libo Chen's Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span><strong>Libo Chen's Lab</strong> · Neuromorphic Intelligence</span>
+        <span>Department of Electrical Engineering · Uppsala University</span>
+      </div>
+    </div>
+
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Libo Chen's Lab homepage">
+        <img class="brand-mark" src="Photo/logo.jpg" alt="Libo Chen's Lab logo" />
+        <div class="brand-text">
+          <strong>Libo Chen's Lab</strong>
+          <span>Neuromorphic Intelligence</span>
+        </div>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Main navigation">
+        <a href="research.html" class="active">Research</a>
+        <a href="approach.html">Approach</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="openings.html">Openings</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Research</span>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Research themes</div>
+            <h2>From device physics to intelligent systems.</h2>
+          </div>
+          <p>
+            Our work connects emerging nanoelectronic devices, compact circuits, event-driven sensing, and spiking neural networks for real-world edge intelligence.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">µ</div>
+            <h3>Neuromorphic devices</h3>
+            <p>
+              Emerging ferroelectric and antiferroelectric transistors for compact neuronal dynamics, low-energy switching, and scalable integration.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">↯</div>
+            <h3>Brain-inspired circuits</h3>
+            <p>
+              CMOS and emerging-device neuron circuits that support leakage, integration, spike generation, reset, adaptation, and dynamic thresholding.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">⌁</div>
+            <h3>Spiking neural networks</h3>
+            <p>
+              Hardware-aware SNN models and benchmarks for sparse event-driven inference, low latency, and energy-efficient edge deployment.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">✋</div>
+            <h3>Neuromorphic sensing</h3>
+            <p>
+              Artificial tactile and wearable sensing systems that encode physical interactions into efficient temporal representations.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">⚕</div>
+            <h3>Wearable digital technologies</h3>
+            <p>
+              AI-assisted sensing for gait measurement, rehabilitation assessment, and digital biomarkers for clinical and health applications.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">AI</div>
+            <h3>Embodied and edge AI</h3>
+            <p>
+              System-level intelligence for robots, prosthetics, wearables, and physical-world AI constrained by energy, latency, robustness, and size.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Libo Chen's Lab · Uppsala University</div>
+      <div>Static site for GitHub Pages · Edit <code>research.html</code></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+
+    toggle?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

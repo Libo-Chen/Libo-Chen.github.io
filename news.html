@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Latest news and updates from Libo Chen's Lab — papers, grants, talks, and open positions." />
+  <title>News | Libo Chen's Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span><strong>Libo Chen's Lab</strong> · Neuromorphic Intelligence</span>
+        <span>Department of Electrical Engineering · Uppsala University</span>
+      </div>
+    </div>
+
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Libo Chen's Lab homepage">
+        <img class="brand-mark" src="Photo/logo.jpg" alt="Libo Chen's Lab logo" />
+        <div class="brand-text">
+          <strong>Libo Chen's Lab</strong>
+          <span>Neuromorphic Intelligence</span>
+        </div>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Main navigation">
+        <a href="research.html">Research</a>
+        <a href="approach.html">Approach</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html" class="active">News</a>
+        <a href="team.html">Team</a>
+        <a href="openings.html">Openings</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">News</span>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">News</div>
+            <h2>Latest updates.</h2>
+          </div>
+
+          </p>
+        </div>
+
+        <div class="news-list">
+          <article class="news-item">
+            <div class="date">2026.06.15</div>
+            <div>
+              <h3>Welcome Sampan Manna to the group</h3>
+              <p>We are delighted to welcome PhD student Sampan Manna as a new member of the lab. Welcome aboard!</p>
+            </div>
+            <span class="arrow">→</span>
+          </article>
+
+          <article class="news-item">
+            <div class="date">2026.06.04</div>
+            <div>
+              <h3>Congratulations to Jesper Hägglund and Evelyn Persson</h3>
+              <p>Congratulations to Jesper Hägglund and Evelyn Persson on successfully completing their undergraduate thesis defence. Well done!</p>
+            </div>
+            <span class="arrow">→</span>
+          </article>
+
+          <article class="news-item">
+            <div class="date">2026</div>
+            <div>
+              <h3>Libo Chen's Lab homepage launched</h3>
+              <p>A new homepage for sharing research activities in Neuromorphic Intelligence.</p>
+            </div>
+            <span class="arrow">→</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Libo Chen's Lab · Uppsala University</div>
+      <div>Static site for GitHub Pages · Edit <code>news.html</code></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+
+    toggle?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

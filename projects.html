@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Selected research projects at Libo Chen's Lab — neuromorphic hardware, tactile intelligence, digital biomarkers, and sustainable edge intelligence." />
+  <title>Projects | Libo Chen's Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span><strong>Libo Chen's Lab</strong> · Neuromorphic Intelligence</span>
+        <span>Department of Electrical Engineering · Uppsala University</span>
+      </div>
+    </div>
+
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Libo Chen's Lab homepage">
+        <img class="brand-mark" src="Photo/logo.jpg" alt="Libo Chen's Lab logo" />
+        <div class="brand-text">
+          <strong>Libo Chen's Lab</strong>
+          <span>Neuromorphic Intelligence</span>
+        </div>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Main navigation">
+        <a href="research.html">Research</a>
+        <a href="approach.html">Approach</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="openings.html">Openings</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Projects</span>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Selected projects</div>
+            <h2>Research directions.</h2>
+          </div>
+          <p>
+            The lab develops core neuromorphic hardware while applying event-driven intelligence to robotics, wearables, and health-related sensing.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-feature">
+            <div>
+              <span class="tag red">Flagship direction</span>
+              <h3>Brain-like artificial neurons with circuit-device co-design</h3>
+              <p>
+                We develop compact artificial neuron circuits using antiferroelectric/ferroelectric transistor dynamics to achieve rich neuronal functions,
+                high efficiency, and scalable hardware implementation for spiking neural networks.
+              </p>
+            </div>
+
+            <div class="tags">
+              <span class="tag blue">AFe / Fe transistors</span>
+              <span class="tag blue">Adaptive LIF neurons</span>
+              <span class="tag">Dynamic threshold</span>
+              <span class="tag">Energy-efficient SNNs</span>
+            </div>
+          </article>
+
+          <div class="project-list">
+            <article class="card">
+              <h3>Neuromorphic tactile intelligence</h3>
+              <p>
+                Artificial touch systems for robotic and prosthetic perception using tactile sensors, artificial neurons, receptive-field processing, and SNNs.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>AI-driven digital biomarkers</h3>
+              <p>
+                Wearable sensing and machine learning for gait measurement, rehabilitation assessment, and longitudinal monitoring of disease progression.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Sustainable edge intelligence</h3>
+              <p>
+                Low-power sensors and event-driven AI for physical-world monitoring, sustainable manufacturing, and resource-aware intelligent systems.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Libo Chen's Lab · Uppsala University</div>
+      <div>Static site for GitHub Pages · Edit <code>projects.html</code></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+
+    toggle?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

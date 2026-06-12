@@ -30,8 +30,7 @@
 
       <nav class="menu" id="menu" aria-label="Main navigation">
         <a href="research.html" class="active">Research</a>
-        <a href="approach.html">Approach</a>
-        <a href="projects.html">Projects</a>
+        <a href="teaching.html">Teaching</a>
         <a href="publications.html">Publications</a>
         <a href="news.html">News</a>
         <a href="team.html">Team</a>
@@ -116,13 +115,121 @@
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         APPROACH (moved from approach.html)
+    ═══════════════════════════════════════════ -->
+    <section>
+      <div class="container split">
+        <div class="mission">
+          <div class="section-kicker">Approach</div>
+          <h2>Cross-layer co-design is the central principle.</h2>
+          <p>
+            We treat material properties, device dynamics, circuit behavior, and algorithmic requirements as a coupled design space.
+            This allows us to transform physical device effects into useful computational primitives for <strong>compact, adaptive, and energy-efficient neuromorphic systems</strong>.
+          </p>
+        </div>
+
+        <div class="pipeline">
+          <div class="step">
+            <div class="step-no">01</div>
+            <div>
+              <h3>Materials and devices</h3>
+              <p>Tune hysteresis, leakage, relaxation, steep-slope behavior, endurance, variability, and device operating windows.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">02</div>
+            <div>
+              <h3>Circuits and architectures</h3>
+              <p>Design compact neuronal and synaptic building blocks that exploit device physics instead of compensating for it.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">03</div>
+            <div>
+              <h3>Sensors and interfaces</h3>
+              <p>Build tactile and wearable sensor systems that generate sparse, temporal, and biologically inspired signal representations.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-no">04</div>
+            <div>
+              <h3>Algorithms and benchmarks</h3>
+              <p>Evaluate accuracy, energy per inference, latency, robustness, scalability, and relevance for edge and embodied AI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECTS (moved from projects.html)
+    ═══════════════════════════════════════════ -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Selected projects</div>
+            <h2>Research directions.</h2>
+          </div>
+          <p>
+            The lab develops core neuromorphic hardware while applying event-driven intelligence to robotics, wearables, and health-related sensing.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-feature">
+            <div>
+              <span class="tag red">Flagship direction</span>
+              <h3>Brain-like artificial neurons with circuit-device co-design</h3>
+              <p>
+                We develop compact artificial neuron circuits using antiferroelectric/ferroelectric transistor dynamics to achieve rich neuronal functions,
+                high efficiency, and scalable hardware implementation for spiking neural networks.
+              </p>
+            </div>
+
+            <div class="tags">
+              <span class="tag blue">AFe / Fe transistors</span>
+              <span class="tag blue">Adaptive LIF neurons</span>
+              <span class="tag">Dynamic threshold</span>
+              <span class="tag">Energy-efficient SNNs</span>
+            </div>
+          </article>
+
+          <div class="project-list">
+            <article class="card">
+              <h3>Neuromorphic tactile intelligence</h3>
+              <p>
+                Artificial touch systems for robotic and prosthetic perception using tactile sensors, artificial neurons, receptive-field processing, and SNNs.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>AI-driven digital biomarkers</h3>
+              <p>
+                Wearable sensing and machine learning for gait measurement, rehabilitation assessment, and longitudinal monitoring of disease progression.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Sustainable edge intelligence</h3>
+              <p>
+                Low-power sensors and event-driven AI for physical-world monitoring, sustainable manufacturing, and resource-aware intelligent systems.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Libo Chen's Lab · Uppsala University</div>
-      <div>Static site for GitHub Pages · Edit <code>research.html</code></div>
-    </div>
+      <div>© <span id="year"></span> Libo Chen's Lab · Uppsala University</div>    </div>
   </footer>
 
   <script>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Teaching at Libo Chen's Lab — courses across first, second, and third cycle studies at Uppsala University." />
+  <title>Teaching | Libo Chen's Lab</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pub-year-section {
+      margin-bottom: 48px;
+    }
+
+    .pub-year-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .pub-year-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .pub-year-header::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span><strong>Libo Chen's Lab</strong> · Neuromorphic Intelligence</span>
+        <span>Department of Electrical Engineering · Uppsala University</span>
+      </div>
+    </div>
+
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Libo Chen's Lab homepage">
+        <img class="brand-mark" src="Photo/logo.jpg" alt="Libo Chen's Lab logo" />
+        <div class="brand-text">
+          <strong>Libo Chen's Lab</strong>
+          <span>Neuromorphic Intelligence</span>
+        </div>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Main navigation">
+        <a href="research.html">Research</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="openings.html">Openings</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Teaching</span>
+      </div>
+    </nav>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Teaching</div>
+            <h2>Courses.</h2>
+          </div>
+          <p>
+
+          </p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ First cycle ═══ -->
+        <div class="pub-year-section">
+          <div class="pub-year-header"><h3>First cycle studies</h3></div>
+          <div class="pub-list">
+
+            <article class="pub-item">
+              <div>
+                <h3>Digital Technology and Electronics</h3>
+              </div>
+            </article>
+
+            <article class="pub-item">
+              <div>
+                <h3>Signals and Systems</h3>
+              </div>
+            </article>
+
+            <article class="pub-item">
+              <div>
+                <h3>Lifelong-Learning Open Web Course: Introduction to Brain-Inspired Computing</h3>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ Second cycle ═══ -->
+        <div class="pub-year-section">
+          <div class="pub-year-header"><h3>Second cycle studies</h3></div>
+          <div class="pub-list">
+
+            <article class="pub-item">
+              <div>
+                <h3>Summer School: Introduction to Neuromorphic Computing</h3>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════ Third cycle ═══ -->
+        <div class="pub-year-section">
+          <div class="pub-year-header"><h3>Third cycle studies</h3></div>
+          <div class="pub-list">
+
+            <article class="pub-item">
+              <div>
+                <h3>Faculty Common Course: Brain-inspired Computing</h3>
+              </div>
+            </article>
+
+            <article class="pub-item">
+              <div>
+                <h3>Neuromorphic Computing and Engineering</h3>
+              </div>
+            </article>
+
+            <article class="pub-item">
+              <div>
+                <h3>Electrical characterization for thin-film technology</h3>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Libo Chen's Lab · Uppsala University</div>    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('menu');
+
+    toggle?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
